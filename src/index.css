@@ -29,6 +29,7 @@ body {
   margin: 0 auto;
   position: relative;
   z-index: 2;
+  transform: translateY(32px);
 }
 
 .hero-eyebrow {
@@ -450,4 +451,63 @@ body {
 .mobile-menu-links a:active {
   color: #5227ff;
   transform: translateX(8px);
+}
+.hero-title {
+  display: block;
+}
+
+.hero-title-line {
+  display: block;
+  width: fit-content;
+
+  opacity: 0;
+  transform: translateY(20px);
+  filter: blur(8px);
+
+  animation: heroTitleReveal 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-line-1 {
+  animation-delay: 0.2s;
+}
+
+.hero-line-2 {
+  animation-delay: 0.45s;
+}
+
+.hero-line-3 {
+  animation-delay: 0.7s;
+}
+
+@keyframes heroTitleReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+.hero-eyebrow-reveal {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: eyebrowReveal 0.8s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    0.1s forwards;
+}
+
+@keyframes eyebrowReveal {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
