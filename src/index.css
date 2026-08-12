@@ -1,2 +1,185 @@
-@import "tailwindcss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  color: #111;
+}
+
+.hero {
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-content {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  margin-bottom: 2rem;
+}
+
+.hero-title {
+  font-size: clamp(4rem, 9vw, 9rem);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  font-weight: 700;
+}
+
+.hero-description {
+  max-width: 500px;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.hero-cta {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.9rem 1.4rem;
+  color: #111;
+  border: 1px solid #111;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.hero-cta:hover {
+  background: #111;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.hero-cta span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.hero-cta:hover span {
+  transform: translateX(5px);
+}
+
+.hero-visual {
+  position: absolute;
+  width: 55vw;
+  height: 85vh;
+  right: -2vw;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.hero-visual canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+.hero-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroReveal 0.9s ease forwards;
+}
+
+.hero-eyebrow {
+  animation-delay: 0.1s;
+}
+
+.hero-title {
+  animation-delay: 0.25s;
+}
+
+.hero-description {
+  animation-delay: 0.45s;
+}
+
+.hero-cta {
+  animation-delay: 0.6s;
+}
+
+.hero-visual {
+  animation-delay: 0.4s;
+}
+
+@keyframes heroReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100svh;
+    padding: 6rem 0 4rem;
+  }
+
+  .hero-content {
+    width: 88%;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 15vw, 5rem);
+    line-height: 0.92;
+  }
+
+  .hero-description {
+    max-width: 90%;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .hero-cta {
+    margin-top: 1.5rem;
+  }
+
+  .hero-visual {
+    width: 100vw;
+    height: 55vh;
+    right: -20vw;
+    top: 60%;
+    opacity: 0.5;
+  }
+}
+.hero-visual {
+  animation: visualReveal 1.2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes visualReveal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
