@@ -36,8 +36,8 @@ export default function Navbar() {
       >
         <a href="/" className="navbar-brand">
           <img src="/aice-logo.png" alt="AICE" />
+          <span>AICE</span>
         </a>
-
         <div className="navbar-links">
           <a href="#about">About</a>
           <a href="#mission">Mission</a>
