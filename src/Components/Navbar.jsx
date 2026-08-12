@@ -35,7 +35,7 @@ export default function Navbar() {
         style={{ '--nav-progress': scrollProgress }}
       >
         <a href="/" className="navbar-brand">
-          AICE
+          <img src="/aice-logo.png" alt="AICE" />
         </a>
 
         <div className="navbar-links">
