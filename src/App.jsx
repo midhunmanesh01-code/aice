@@ -7,12 +7,13 @@ import Events from './Components/Events';
 import EventJoinTransition from './Components/EventJoinTransition';
 import Join from './Components/Join';
 import Footer from './Components/Footer';
+import LoadingScreen from './Components/LoadingScreen';
 
 function App() {
   return (
     <>
+      <LoadingScreen />
       <Navbar />
-
       <div className="hero-transition">
         <Hero />
       </div>
