@@ -17,7 +17,7 @@ export default function Join() {
           learning, collaboration, experimentation, and innovation.
         </p>
 
-        <a href="#footer" className="join-cta">
+        <a href="#join" className="join-cta">
           Join AICE
           <span>↗</span>
         </a>
