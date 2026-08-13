@@ -1,0 +1,166 @@
+.event-join-transition {
+  --transition-progress: 0;
+
+  position: relative;
+  height: 55vh;
+  min-height: 360px;
+  overflow: hidden;
+  background: #050505;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  isolation: isolate;
+}
+
+/* Soft ambient glow */
+.event-join-transition::before {
+  content: '';
+  position: absolute;
+  width: 35vw;
+  height: 35vw;
+  max-width: 500px;
+  max-height: 500px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(82, 39, 255, 0.18),
+    rgba(82, 39, 255, 0.05) 35%,
+    transparent 70%
+  );
+
+  opacity: calc(0.25 + var(--transition-progress) * 0.75);
+
+  transform:
+    scale(calc(0.65 + var(--transition-progress) * 0.9));
+
+  transition: transform 0.08s linear;
+}
+
+/* Main energy system */
+.event-join-energy {
+  position: relative;
+
+  width: 180px;
+  height: 180px;
+
+  transform:
+    scale(calc(1.25 - var(--transition-progress) * 0.45))
+    rotate(calc(var(--transition-progress) * 45deg));
+
+  opacity: calc(0.35 + var(--transition-progress) * 0.65);
+
+  transition:
+    transform 0.08s linear,
+    opacity 0.08s linear;
+}
+
+/* Core */
+.event-join-core {
+  position: absolute;
+  inset: 50px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #ffffff 0%,
+      #a18bff 12%,
+      #5227ff 40%,
+      rgba(82, 39, 255, 0.15) 70%,
+      transparent 100%
+    );
+
+  box-shadow:
+    0 0 20px rgba(82, 39, 255, 0.9),
+    0 0 60px rgba(82, 39, 255, 0.55),
+    0 0 120px rgba(82, 39, 255, 0.2);
+
+  transform:
+    scale(calc(0.55 + var(--transition-progress) * 0.8));
+}
+
+/* Rings */
+.event-join-ring {
+  position: absolute;
+  inset: 0;
+
+  border: 1px solid rgba(161, 139, 255, 0.35);
+  border-radius: 50%;
+
+  transform:
+    scale(calc(0.65 + var(--transition-progress) * 0.9));
+
+  opacity: calc(0.2 + var(--transition-progress) * 0.8);
+}
+
+.event-join-ring-1 {
+  animation: eventRingRotate 9s linear infinite;
+}
+
+.event-join-ring-2 {
+  inset: 18px;
+  border-color: rgba(82, 39, 255, 0.28);
+
+  animation: eventRingRotateReverse 12s linear infinite;
+}
+
+.event-join-ring-3 {
+  inset: 35px;
+  border-color: rgba(255, 255, 255, 0.18);
+
+  animation: eventRingRotate 7s linear infinite;
+}
+
+@keyframes eventRingRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes eventRingRotateReverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .event-join-transition {
+    height: 42vh;
+    min-height: 280px;
+  }
+
+  .event-join-energy {
+    width: 140px;
+    height: 140px;
+  }
+
+  .event-join-core {
+    inset: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .event-join-ring {
+    animation: none;
+  }
+
+  .event-join-transition::before,
+  .event-join-energy,
+  .event-join-core,
+  .event-join-ring {
+    transition: none;
+  }
+}

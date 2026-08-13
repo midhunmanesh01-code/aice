@@ -2,6 +2,9 @@ import './App.css'
 import Hero from './Components/Hero'
 import Navbar from './Components/Navbar'
 import About from './Components/About'
+import EventsTransition from './Components/EventsTransition';
+import Events from './Components/Events';
+import EventJoinTransition from './Components/EventJoinTransition';
 
 function App() {
   return (
@@ -12,6 +15,9 @@ function App() {
         <Hero />
       </div>
       <About />
+      <EventsTransition />
+      <Events />
+      <EventJoinTransition />
     </>
   )
 }
