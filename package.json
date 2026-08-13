@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-three/fiber": "^9.7.0",
     "lenis": "^1.3.26",
+    "ogl": "^1.0.11",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "three": "^0.180.0"
