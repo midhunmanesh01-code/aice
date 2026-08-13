@@ -57,7 +57,7 @@ export default function About() {
           </div>
         </ScrollStackItem>
 
-        <ScrollStackItem itemClassName="about-card mission-card">
+        <ScrollStackItem id="mission" itemClassName="about-card mission-card">
           <div className="mission-detail-card">
             <div className="mission-content">
               <p className="about-eyebrow">02 — MISSION</p>
@@ -95,7 +95,7 @@ export default function About() {
           </div>
         </ScrollStackItem>
 
-        <ScrollStackItem itemClassName="about-card vision-card">
+        <ScrollStackItem id="vision" itemClassName="about-card vision-card">
           <div className="vision-detail-card">
             <div className="vision-content">
               <p className="about-eyebrow">03 — VISION</p>

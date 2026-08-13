@@ -4,7 +4,7 @@ export default function Events() {
   return (
     <section className="events" id="events">
       <div className="events-header">
-        <p className="events-eyebrow">03 — EVENTS</p>
+        <p className="events-eyebrow">04 — EVENTS</p>
 
         <h2 className="events-title">
           Upcoming <span>events.</span>

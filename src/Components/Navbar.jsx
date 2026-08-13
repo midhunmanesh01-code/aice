@@ -41,8 +41,8 @@ export default function Navbar() {
         <div className="navbar-links">
           <a href="#about">About</a>
           <a href="#mission">Mission</a>
+          <a href="#vision">Vision</a>
           <a href="#events">Events</a>
-          <a href="#activities">Activities</a>
         </div>
 
         <a href="#join" className="navbar-join">
@@ -65,8 +65,8 @@ export default function Navbar() {
         <div className="mobile-menu-links">
           <a href="#about" onClick={closeMenu}>About</a>
           <a href="#mission" onClick={closeMenu}>Mission</a>
+          <a href="#vision" onClick={closeMenu}>Vision</a>
           <a href="#events" onClick={closeMenu}>Events</a>
-          <a href="#activities" onClick={closeMenu}>Activities</a>
         </div>
 
         <a

@@ -5,6 +5,8 @@ import About from './Components/About'
 import EventsTransition from './Components/EventsTransition';
 import Events from './Components/Events';
 import EventJoinTransition from './Components/EventJoinTransition';
+import Join from './Components/Join';
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
       <EventsTransition />
       <Events />
       <EventJoinTransition />
+      <Join />
+      <Footer />
     </>
   )
 }

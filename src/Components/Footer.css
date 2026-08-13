@@ -1,0 +1,139 @@
+.footer {
+  position: relative;
+  padding: 4.5rem 6vw 1.5rem;
+  background: #050505;
+  color: #fff;
+  border-top: 1px solid rgba(255,255,255,.08);
+  overflow: hidden;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.footer-brand {
+  max-width: 650px;
+}
+
+.footer-eyebrow {
+  margin: 0 0 1.5rem;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  color: rgba(255,255,255,.45);
+}
+
+.footer-brand h2 {
+  margin: 0;
+  font-size: clamp(4rem, 8vw, 8rem);
+  line-height: .82;
+  letter-spacing: -.065em;
+}
+
+.footer-brand h2 span {
+  color: #5227ff;
+}
+
+.footer-brand > p:last-child {
+  margin-top: 1.5rem;
+  color: rgba(255,255,255,.5);
+  font-size: .9rem;
+  line-height: 1.7;
+}
+
+.footer-links {
+  display: flex;
+  gap: 7rem;
+  padding-top: 1rem;
+}
+
+.footer-links > div {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  min-width: 120px;
+}
+
+.footer-label {
+  margin: 0 0 .7rem;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  color: rgba(255,255,255,.35);
+}
+
+.footer-links a {
+  width: fit-content;
+  color: rgba(255,255,255,.7);
+  text-decoration: none;
+  font-size: .85rem;
+  transition:
+    color .3s ease,
+    transform .3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  transform: translateX(5px);
+}
+
+.footer-bottom {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,.08);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: rgba(255,255,255,.3);
+  font-size: .7rem;
+  letter-spacing: .02em;
+}
+
+@media (max-width:768px) {
+  .footer {
+    padding: 4rem 1.25rem 1.5rem;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 4rem;
+    padding-bottom: 3rem;
+  }
+
+  .footer-brand h2 {
+    font-size: clamp(4rem, 18vw, 7rem);
+  }
+
+  .footer-links {
+    gap: 4rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: .5rem;
+  }
+}
+.footer-brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 2rem;
+}
+
+.footer-brand-logo img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.footer-brand-logo span {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
