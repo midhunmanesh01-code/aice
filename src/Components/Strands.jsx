@@ -1,6 +1,5 @@
 import { Renderer, Program, Mesh, Color, Triangle, RenderTarget } from 'ogl';
 import { useEffect, useRef } from 'react';
-
 import './Strands.css';
 
 const MAX_STRANDS = 12;

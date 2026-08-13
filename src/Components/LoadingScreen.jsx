@@ -35,7 +35,7 @@ export default function LoadingScreen() {
     <div className={`loading-screen ${isLoaded ? 'is-loaded' : ''}`}>
       <div className="loading-content">
         <div className="loading-logo">
-          <img src="/aice-logo.png" alt="AICE" />
+          <img src="/aice-logo-transparent.png" alt="AICE" />
         </div>
 
         <h1>AICE</h1>
